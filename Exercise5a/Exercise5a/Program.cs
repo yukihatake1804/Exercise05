@@ -17,9 +17,8 @@ namespace Exercise5a
             {
                 char c = Console.ReadKey().KeyChar;
                 Console.WriteLine("  " + Char2Code(c));
+                Console.WriteLine("Is Upper? = " + IsUpper(c));
             }
-
-            IsUpper('a');
 
         }
 
@@ -58,6 +57,10 @@ namespace Exercise5a
        
         public static bool IsLower(char c)
         {
+            if ((int)c > (int)96 && (int)c < (int)123)
+            {
+                return true;
+            }
             return false;
         }
         public static char ToUpper(char c)
