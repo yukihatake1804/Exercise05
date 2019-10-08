@@ -12,6 +12,15 @@ namespace Exercise5a
         {
             PrintAtoZ();
             PrintAtoZ2();
+
+            while (true)
+            {
+                char c = Console.ReadKey().KeyChar;
+                Console.WriteLine("  " + Char2Code(c));
+            }
+
+            IsUpper('a');
+
         }
 
         static void PrintAtoZ()
@@ -30,10 +39,30 @@ namespace Exercise5a
             }
             Console.WriteLine(" ");
         }
-        static void PrintAtoZ3()
+        
+        public static int Char2Code(char c)
         {
-
+            return (int)c;
         }
 
+        public static bool IsUpper(char c)
+        {
+            
+            if ((int)c > (int)64 && (int)c < (int)91)
+            {
+                return true;
+            }
+            return false;
+
+        }
+       
+        public static bool IsLower(char c)
+        {
+            return false;
+        }
+        public static char ToUpper(char c)
+        {
+            return c;  
+        }
     }
 }
